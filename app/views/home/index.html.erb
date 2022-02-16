@@ -1,0 +1,8 @@
+<h1>Home#index</h1>
+<% if session[:user_id] %>
+<%= link_to "logout", user_path(session[:user_id]), method: :delete  %>
+<% else %>
+
+<%= link_to "Login", new_user_path %>
+
+<% end %>
