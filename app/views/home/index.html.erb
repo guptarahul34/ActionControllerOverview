@@ -1,4 +1,11 @@
 <h1>Home#index</h1>
+
+<% if !@cookies_data.nil? %>
+      <p>Logged in  <%= @cookies_data %> </p>
+<% end %>
+
+
+<p> <%= notice %>  </p>
 <% if session[:user_id] %>
 <%= link_to "logout", user_path(session[:user_id]), method: :delete  %>
 <% else %>
